@@ -45,3 +45,12 @@ class Name(Field):
 
 class Phone(Field):
     pass
+
+
+if __name__ == "__main__":
+    name = Name("Bill")
+    phone = Phone("12345")
+    rec = Record(name, phone)
+    ab = AddressBook()
+    ab.add_record(rec)
+    assert isinstance(ab["Bill"], Record)
